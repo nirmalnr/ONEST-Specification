@@ -22,8 +22,8 @@ When the Provider app sends a form to the Seeker app to get further details from
 | user-parent-phone          | input text     | User's parent's phone number                                 |                               |                                                                         |
 | user-ann-hh-inc            | input text     | User's annual household income                               |                               |                                                                         |
 | user-address               | input text     | Address of the user                                          |                               | This can be returned in `billing.address` in subsequent calls           |
-| \<Document Name>-verified  | input checkbox | Whether the document is verified by the agent                |                               | Please see the list of documents to see the values \<Document Name> can take |
-| \<Document Name>-doc       | input file     | Document as pdf or image                                     |                               | Please see the list of documents to see the values \<Document Name> can take |
+| \<Document Name/ID>-verified  | input checkbox | Whether the document is verified by the agent                |                               | Please see the list of documents to see the values \<Document Name> can take |
+| \<Document Name/ID>-doc       | input file     | Document as pdf or image                                     |                               | Please see the list of documents to see the values \<Document Name> can take |
 
 ### List of documents
 
@@ -45,3 +45,5 @@ When the Provider app sends a form to the Seeker app to get further details from
 | Professional Certificate     | profressional-certificate   |                 | profressional-certificate   | Experience Certificate                                                                                         |
 | Resume                       | resume                      |                 | resume                      | Latest document of professional experience                                                                     |
 | Income Proof                 | income-proof                |                 | income-proof                | Last filled ITR                                                                                                |
+
+Provider can request either a document ID or a document Name in the form. For example if the provider wants any proof of address, they will send the attribute as `proof-of-address-doc` for the file input tag in the form. The seeker can choose any proof of address document it has with them. If the provider specifically wants voter ID, then they wll send the attribute as `voter-id-doc` 
